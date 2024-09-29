@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e2e;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.app-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: #2b2b40;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Header Section */
+.chat-header {
+    background-color: #34354a;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid #4e4f66;
+}
+
+.chat-header h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* Chat Body */
+.chat-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Upload Section */
+.upload-section, .ask-section {
+    background-color: #2f3143;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    color: #d1d1e9;
+}
+
+.upload-section h2, .ask-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* Input Styles */
+input[type="file"] {
+    padding: 10px;
+    background-color: #34354a;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #34354a;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 20px;
+    background-color: #4e6cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #3b57e3;
+}
+
+.btn:active {
+    background-color: #2e46b0;
+}
+
+/* Response Box */
+.response-box {
+    background-color: #34354a;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 50px;
+    color: #d1d1e9;
+    font-size: 1rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+}

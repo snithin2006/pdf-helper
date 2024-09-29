@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Helper</title>
+</head>
+<body>
+    <h1>PDF Helper</h1>
+    <form id="uploadForm">
+        <input type="file" id="fileInput" name="file" accept=".pdf,.doc,.docx,.txt" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h1>Ask a Question</h1>
+    <textarea id="questionInput" rows="4" cols="50" placeholder="Type your question here..." required></textarea><br>
+    <button id="askButton">Ask</button>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('uploadForm').onsubmit = async function(event) {
+            event.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        };
+
+        document.getElementById('askButton').onclick = async function() {
+            const question = document.getElementById('questionInput').value;
+
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question })
+            });
+
+            const result = await response.json();
+            document.getElementById('response').innerText = 'Answer: ' + result.answer;
+        };
+    </script>
+</body>
+</html>
