@@ -10,7 +10,6 @@ PDF Helper is a Flask-based web application that allows users to upload PDF file
 - **Question Answering**: Query the processed document and get answers using a language model via Groq API.
 
 ## Installation
-
 ### Prerequisites
 
 - Python 3.9+
