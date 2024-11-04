@@ -16,6 +16,13 @@ PDF Helper is a Flask-based web application that allows users to upload PDF file
 - Python 3.9+
 - Virtual environment setup (optional but recommended)
 
+### Dependencies
+- Flask
+- Fitz (PyMuPDF)
+- SentenceTransformers
+- ChromaDB
+- Groq
+
 ### Clone the Repository
 
 ```bash
@@ -34,7 +41,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Install Dependencies
+### Environment Setup
 Ensure you have the 'groq' Python package configured with your API key.
 
 ## Usage
@@ -59,13 +66,6 @@ The application will start on http://0.0.0.0:8080.
 1. **app.py:** Main application code.
 2. **uploads/:** Directory where uploaded files are stored.
 3. **static/:** Contains static files like index.html.
-
-## Dependencies
-- Flask
-- Fitz (PyMuPDF)
-- SentenceTransformers
-- ChromaDB
-- Groq
 
 ## Contact
 For any questions or issues, please contact [nithin06.siva@gmail.com](mailto:nithin06.siva@gmail.com).
