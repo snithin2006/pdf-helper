@@ -26,7 +26,7 @@ PDF Helper is a Flask-based web application that allows users to upload PDF file
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/snithin2006/PDF-Helper.git
+git clone https://github.com/snithin2006/pdf-helper.git
 cd PDF-Helper
 ```
 
